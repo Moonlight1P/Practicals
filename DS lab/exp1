@@ -1,0 +1,38 @@
+Experiment 1:
+
+
+#include<stdio.h>
+#include<conio.h>
+static int count=0;
+void TOH(int n,int A,int B,int C)
+{
+	if(n>0)
+	{
+		TOH(n-1,A,C,B);
+		printf("Move a disc from %d to %d\n",A,C);
+		TOH(n-1,B,A,C);
+		count++;
+	}
+}
+void main()
+{
+	int n,A=1,B=2,C=3;
+	clrscr();
+	printf("Enter number of discs: ");
+	scanf("%d",&n);
+	TOH(n,A,B,C);
+	printf("The number of steps is %d",count);
+	getch();
+}
+
+/***OUTPUT***
+Enter number of discs: 3
+Move a disc from 1 to 3
+Move a disc from 1 to 2
+Move a disc from 3 to 2
+Move a disc from 1 to 3
+Move a disc from 2 to 1
+Move a disc from 2 to 3
+Move a disc from 1 to 3
+The number of steps is 7
+*****/
