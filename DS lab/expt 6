@@ -207,3 +207,19 @@ int main()
     
     return 0;
 }
+
+xxxxoutputxxxx
+
+node with 50 value inserted successfully
+node with 25 value inserted successfully
+node with 12 value inserted successfully
+node with 30 value inserted successfully
+node with 6 value inserted successfully
+node with 75 value inserted successfully
+node with 60 value inserted successfully
+node with 52 value inserted successfully
+node with 70 value inserted successfully
+Inorder traversal: 6 12 25 30 50 52 60 70 75 
+node with value 25 replaced with 30 
+node with value 30 deleted
+Inorder traversal: 6 12 30 1 0 50 52 60 70 75 
