@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                alert("first Name must be filled out");
+                return false;
+            }
+            var x = document.forms["myForm"]["lname"].value;
+            if (x == "") {
+                alert("last Name must be filled out");
+                return false;
+            }
+        }
+    </script>
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["email"].value;
+            var atpos = x.indexOf("@");
+            var dotpos = x.lastIndexOf(".");
+            if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length) {
+                alert("Not a valid e-mail address");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>JAVA SCRIPT VALIDATION </h2>
+
+    <form name="myForm" action="/action_page .php" onsubmit="return validateForm()" method="post">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname">
+        <input type="submit" value="Submit">
+
+    </form>
+    <form name="myForm" action="demo_form.asp" onsubmit="return validateForm();" method="post">
+
+        <label for="Email"> Email:</label><br>
+        <input type="email" name="email">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
